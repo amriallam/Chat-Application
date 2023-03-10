@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ChitChat</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <script src="./javascript//socket.io.js"></script>
+    <script src="./javascript/script.js" defer></script>
+    <link rel="icon" type="image/x-icon" href="./assets/favourit.svg" />
+  </head>
+  <body>
+    <section
+      id="home"
+      class="d-flex flex-column align-items-center justify-content-center gap-3"
+    >
+      <h1>ChitChat</h1>
+      <div class="col-6 col-lg-3">
+        <input
+          type="text"
+          class="form-control text-center"
+          id="nameId"
+          placeholder="Nickname"
+        />
+      </div>
+      <p class="alert-light px-2 rounded-1 d-none" id="nameWarning">
+        Enter a valid nickname
+      </p>
+      <button
+        class="btn-primary col-6 col-lg-3 p-2 rounded-2"
+        id="createRoomButton"
+      >
+        Create Room
+      </button>
+      <button
+        class="btn-success col-6 col-lg-3 p-2 rounded-2"
+        id="joinRoomButton"
+      >
+        Join Room
+      </button>
+    </section>
+    <section
+      id="createRoomSection"
+      class="d-flex flex-column align-items-center justify-content-center gap-3 d-none"
+    >
+      <div id="chatWindow" class="col-8 d-flex flex-column"></div>
+      <div
+        class="d-flex align-items-center justify-content-center gap-3 col-10"
+      >
+        <div class="col-6">
+          <input
+            type="text"
+            class="form-control text-center"
+            id="chatBoxlId"
+            placeholder="Enter Messege"
+          />
+        </div>
+        <button class="btn-primary col-2 p-2 rounded-2" id="sendButton">
+          Send
+        </button>
+      </div>
+      <button class="btn-danger col-7 p-2 rounded-2" id="leaveButton">
+        Leave Room
+      </button>
+    </section>
+    <section
+      id="joinRoomSection"
+      class="d-flex flex-column align-items-center justify-content-center gap-3 d-none"
+    >
+      <div class="col-6 col-lg-3">
+        <input
+          type="text"
+          class="form-control text-center"
+          id="roomId"
+          placeholder="Enter Room ID"
+        />
+      </div>
+      <p class="alert-light px-2 rounded-1 d-none" id="roomWarning">
+        Enter a valid room id
+      </p>
+      <p class="alert-light px-2 rounded-1 d-none" id="roomIdWarning">
+        Room doesn't exist
+      </p>
+      <button class="btn-primary col-6 col-lg-3 p-2 rounded-2" id="joinButton">
+        Join
+      </button>
+      <button class="btn-danger col-6 p-2 col-lg-3 rounded-2" id="backButton">
+        Back
+      </button>
+    </section>
+  </body>
+</html>
